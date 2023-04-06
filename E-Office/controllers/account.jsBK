@@ -1,0 +1,58 @@
+const {
+    Order,
+    OrderMeta,
+    Request,
+    Message,
+    ProposalForm,
+    Department,
+    Account,
+    data
+} = require("../models");
+const Joi = require("@hapi/joi");
+const { v4: uuidv4 } = require("uuid");
+const { QueryTypes } = require("sequelize");
+const moment = require('moment');
+const db = {};
+const { sequelize } = require("../config/config");
+
+function validateUser(order) {
+    const schema = Joi.object({
+        // id: Joi.string().required(),
+        // accountId: Joi.number().required(),
+        // departmentId: Joi.number().required(),
+        // proposalFormId: Joi.number().required(),
+        // title: Joi.string().required(),
+        // status: Joi.string(),
+        // completed: Joi.boolean(),
+        // factoryId: Joi.number(),
+        // slug: Joi.string(),
+        // priorityLevel: Joi.any().empty(),
+        // computerEquipment: Joi.any().empty(),
+        // intendedUse: Joi.any().empty(),
+        // activeSeen: Joi.any().empty(),
+        // timeSeen: Joi.any().empty()
+    });
+    return schema.validate(order);
+}
+
+module.exports = {
+    update: async(req, res) => {
+        let result = {};
+        let status = 201;
+        try {
+            let account = await Order.findByPk(req.params.id);
+
+            if (account == null) {
+                status = 400;
+            } else {
+
+            }
+        } catch (error) {
+            console.log(error);
+            status = 500;
+            result.error = error;
+        }
+        return res.status(status).send(result);
+    },
+
+};

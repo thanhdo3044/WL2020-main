@@ -1,0 +1,88 @@
+// app global css in Sass form
+$prodTextNormalSize: 16px;
+$prodTextNormalFont: 'Time New Roman';
+$prodTextOptionsStyle: italic;
+$prodTextTitleSize: 18px;
+$prodTextTitleWieght: 800
+$prodButtonTextSize: 18px;
+$prodButtonTextColor: white;
+$prodButtonTextFont: 'Time';
+
+
+.prodTextNormal 
+    font-size: $prodTextNormalSize 
+    font-family: $prodTextNormalFont 
+.prodTextOption
+    @extend .prodTextNormal
+    font-style: $prodTextOptionsStyle
+.prodTextTitle
+    @extend .prodTextNormal
+    font-size: $prodTextTitleSize
+    font-weight: $prodTextTitleWieght
+.prodButtonText
+    font-size: $prodButtonTextSize
+    font-family: $prodButtonTextFont
+    color: $prodButtonTextColor
+    text-transform: capitalize
+
+.prodPalletCodeSuccess
+    font-size: 3.25rem
+    font-weight: 800
+    line-height: 2rem
+    letter-spacing: 0.0125em
+.woodText
+    font-family: 'Time New Roman'
+.bbTitle
+    margin-top: 23px
+    font-size: 26px
+    font-family: 'Time New Roman'
+    font-weight: 800
+    text-align: center
+.bbSubTitle
+    @extend .woodText
+    text-align: center
+    font-style: italic
+.box-ribbon-wrapper
+  margin: 0 auto
+  position: relative
+.fake-link
+    color: blue
+.fake-link:hover
+    cursor: pointer
+    color: red
+.page-title
+    color: primary
+    font-family: 'Time new Roman'
+    font-size: 28px
+.border
+    border: 2px dotted
+    border-color: brown
+    font-family: 'Time New Roman'
+fieldset
+    border: 1px solid silver
+    padding: 8px
+    border-radius: 4px
+    font-family: 'Time New Roman'
+    max-width: 100%
+legend
+    padding: 2px
+    font-weight: 600
+.item-title
+    font-family: 'Time New Roman'
+    font-size: 16px
+    color: blue
+    font-weight: 600
+.item-quantity
+    font-family: 'Time New Roman'
+    font-size: 16px
+    font-weight: 600
+.fakeKeyboard
+    min-height: 80px
+    border: 2px solid black
+    border-radius: 25px
+    padding: 20px
+    margin: 5px
+    font-size: 25px
+    font-weight: 900
+[class^=qribbon__]
+  border-radius: 5px 5px 0 0

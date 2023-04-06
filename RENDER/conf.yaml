@@ -1,0 +1,227 @@
+--- # Article data
+title: "Cấu hình render"
+endPoint:
+  base:
+    - host: 127.0.0.1
+      port: 221
+      type: master
+    - host: 127.0.0.1
+      port: 321
+  prod:
+    - host: 127.0.0.1
+      port: 222
+      type: master
+    - host: 127.0.0.1
+      port: 322
+  fpm:
+    - host: 127.0.0.1
+      port: 223
+      type: master
+    - host: 127.0.0.1
+      port: 323
+  lgt:
+    - host: 127.0.0.1
+      port: 224
+      type: master
+    - host: 127.0.0.1
+      port: 324
+  pm2:
+    host: 127.0.0.1
+    port: 225
+  wood:
+    - host: 127.0.0.1
+      port: 226
+      type: master
+    - host: 127.0.0.1
+      port: 326
+  hr:
+    - host: 127.0.0.1
+      port: 227
+      type: master
+  render:
+    host: 127.0.0.1
+    port: 229
+  serve:
+    host: 127.0.0.1
+    port: 231
+  admin:
+    - host: 127.0.0.1
+      port: 3000
+      type: master
+    - host: 127.0.0.1
+      port: 3001
+  vcn:
+    - host: 127.0.0.1
+      port: 1030
+      type: master
+    - host: 127.0.0.1
+      port: 1031
+  machine:
+    - host: 127.0.0.1
+      port: 1050
+      type: master
+    - host: 127.0.0.1
+      port: 1051
+routers:
+  - path: /application
+    endPoint: base
+  - path: /roles
+    endPoint: base
+  - path: /signup
+    authencation: false
+    endPoint: base
+  - path: /accounts
+    endPoint: base
+  - path: /vendors
+    endPoint: base
+  - path: /role-values
+    endPoint: base
+  - path: /role-groups
+    endPoint: base
+  - path: /role-types
+    endPoint: base
+  - path: /modules
+    endPoint: base
+  - path: /departments
+    endPoint: base
+  - path: /xuongs
+    endPoint: base
+  - path: /factorys
+    endPoint: base
+  - path: /products
+    endPoint: base
+  - path: /materials
+    endPoint: base
+  - path: /supplies
+    endPoint: base
+  - path: /woods
+    endPoint: base
+  - path: /item-types
+    endPoint: base
+  - path: /units
+    endPoint: base
+  - path: /chemistrys
+    endPoint: base
+  - path: /items
+    endPoint: base
+  - path: /materials-products
+    endPoint: base
+  - path: /product-furniture
+    endPoint: base
+  - path: /supplies-furnitures
+    endPoint: base
+  - path: /password
+    endPoint: base
+  - path: /password-update
+    authencation: false
+    endPoint: base
+  - path: /login
+    authencation: false
+    endPoint: base
+  - path: /dates
+    endPoint: base
+  - path: /customers
+    endPoint: base
+  - path: /token
+    authencation: false
+    endPoint: base
+  - path: /package-type
+    endPoint: prod
+  - path: /work-resources
+    endPoint: prod
+  - path: /ranges
+    endPoint: prod
+  - path: /parcels
+    endPoint: prod
+  - path: /plans
+    endPoint: prod
+  - path: /oscp
+    endPoint: prod
+  - method: get
+    path: /boms/:productId
+    endPoint: prod
+  - method: get
+    path: /boms
+    endPoint: prod
+  - path: /boms
+    endPoint: prod
+  - path: /bom-supplies
+    endPoint: prod
+  - method: get
+    path: /routings
+    endPoint: prod
+  - method: get
+    path: /routings/:itemId
+    endPoint: prod
+  - path: /routings
+    endPoint: prod
+  - method: get
+    path: /ballets/:code
+    endPoint: prod
+  - path: /ballets
+    endPoint: prod
+  - path: /packages
+    endPoint: prod
+  - path: /kilns
+    endPoint: prod
+  - path: /orders
+    endPoint: prod
+  - path: /remedies
+    endPoint: prod
+  - path: /wood-types
+    endPoint: prod
+  - method: get
+    path: /production-order
+    endPoint: prod
+  - method: get
+    path: /production-orders/:id/products
+    endPoint: prod
+  - method: get
+    path: /production-orders
+    endPoint: prod
+  - method: get
+    path: /production-orders/:id
+    endPoint: prod
+  - path: /production-orders
+    endPoint: prod
+  - path: /production-orders-status
+    endPoint: prod
+  - path: /product-of-orders
+    endPoint: prod
+  - method: get
+    path: /bieu-mau-kiem-tra-do-am
+    endPoint: prod
+  - path: /bieu-mau-kiem-tra-do-am
+    endPoint: prod
+  - method: get
+    path: /bao-cao-khuyet-tat
+    endPoint: prod
+  - path: /bao-cao-khuyet-tat
+    endPoint: prod
+  - path: /parcel-woods
+    endPoint: prod
+  - path: /bien-ban
+    endPoint: prod
+  - path: /bao-cao-tinh-hinh-thuc-hien-excel
+    endPoint: prod
+  - method: get
+    path: /kiln-batch
+    endPoint: prod
+  - path: /dinh-muc-ton
+    endPoint: prod
+  - path: /kiln-batch
+    endPoint: prod
+  - path: /reports
+    endPoint: prod
+  - path: /production-time
+    endPoint: prod
+  - path: /dinh-muc-phoi
+    endPoint: prod
+  - path: /pm2
+    endPoint: pm2
+  - path: /work-time
+    endPoint: hr
+  - path: /vcn/qc
+    endPoint: vcn
+  - path: /machine
+    endPoint: machine

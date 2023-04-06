@@ -1,0 +1,22 @@
+{
+  "name": "monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon --watch src ./os.js",
+    "debug": "node --nolazy --inspect-brk=9229 index.js"
+  },
+  "author": "Hoang Van Hieu",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "dotenv": "^8.2.0",
+    "redis": "^2.8.0",
+    "systeminformation": "^4.16.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

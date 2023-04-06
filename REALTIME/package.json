@@ -1,0 +1,26 @@
+{
+  "name": "realtime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon --watch src ./index.js",
+    "debug": "node --nolazy --inspect-brk=9229 index.js"
+  },
+  "author": "Hoàng Văn Hiếu",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "grpc": "^1.24.2",
+    "kafkajs": "^1.11.0",
+    "mssql": "^6.0.1",
+    "redis": "^2.8.0",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

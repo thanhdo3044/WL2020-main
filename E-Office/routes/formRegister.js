@@ -1,0 +1,51 @@
+const controller = require("../controllers/formRegister");
+
+module.exports = router => {
+    router
+        .route("/form-register")
+        .post(controller.add)
+        .get(controller.show);
+    router
+        .route("/form-register/form-register-by-id")
+        .get(controller.getFormRegisterById);
+    router
+        .route("/form-register/question")
+        .post(controller.addQuestion)
+        .get(controller.showQuestion);
+    router
+        .route("/form-register/question-option")
+        .post(controller.addQuestionOption);
+    router
+        .route("/form-register/user-form-register")
+        .post(controller.addUserFormRegister);
+    router
+        .route("/form-register/form-role-department")
+        .post(controller.addFormRoleDepartment);
+    router
+        .route("/form-register/user-form-register-by-formId")
+        .get(controller.showUserFormRegisterByFormId);
+    router
+        .route("/form-register/user-answer")
+        .post(controller.addUserAnswer);
+    router
+        .route("/form-register/user-answer-by-form")
+        .get(controller.showUserAnswerByForm);
+    router
+        .route("/form-register/user-answer/by-accountId")
+        .get(controller.getUserAnswerByAccountId);
+    router
+        .route("/form-register/show-title-by-account")
+        .get(controller.getTitleByAccount);
+    router
+        .route("/form-register/get-deprtment-by-nanager")
+        .get(controller.getDepartmentIsManager);
+    router
+        .route("/form-register/form-register-manager")
+        .get(controller.getFormRegisterManager);
+    router
+        .route("/form-register/report-user-viewed")
+        .get(controller.getReportUserViewed);
+    router
+        .route("/form-register/report-form-detail")
+        .get(controller.getReportFormDetail);
+};

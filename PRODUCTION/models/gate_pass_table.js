@@ -1,0 +1,60 @@
+module.exports= function (sequelize, DataTypes) {
+    const Gate_Pass_Table = sequelize.define('Gate_Pass_Table',{
+        id:{
+            type:DataTypes.INTEGER,
+            primaryKey:true,
+            allowNull:false,
+            field:'ID'
+        },
+        created_at:{
+            type:DataTypes.DATEONLY,
+            allowNull:false,
+            field:'CREATED_AT'
+        },
+        id_table:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            field:'ID_TABELE'
+        },
+        product_name:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            field:'PRODUCT_NAME'
+        },
+        product_code:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            field:'PRODUCT_CODE'
+        },
+        dvt:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            field:'DVT'
+        },
+        lxt:{
+            type:DataTypes.INTEGER,
+            allowNull:false,
+            field:'LXH'
+        },
+        reality:{
+            type:DataTypes.INTEGER,
+            allowNull:false,
+            field:'REALITY'
+        },
+        note:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            field:'NOTE'
+        },
+        code_id:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            field:'CODE_ID'
+        },
+    },{
+        tableName:'GATE_PASS_TABLE',
+        timestamps: false,
+		schema: 'prod'
+    });
+    return Gate_Pass_Table;
+}

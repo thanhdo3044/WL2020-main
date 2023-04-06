@@ -1,0 +1,29 @@
+{
+    "name": "wms",
+    "version": "1.0.0",
+    "description": "test sql",
+    "main": "index.js",
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "lint": "vue-cli-service lint"
+    },
+    "author": "HoangTrungHieu",
+    "license": "ISC",
+    "dependencies": {
+        "api-formatter": "^1.0.2",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "expressjs": "^1.0.1",
+        "jsonwebtoken": "^8.5.1",
+        "lowercase-keys": "^2.0.0",
+        "morgan": "^1.10.0",
+        "mssql": "^6.3.2",
+        "nodemon": "^2.0.7",
+        "sequelize": "^6.3.5",
+        "tedious": "^9.2.3"
+    }
+}
